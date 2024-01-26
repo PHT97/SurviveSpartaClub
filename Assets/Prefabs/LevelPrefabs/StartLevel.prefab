@@ -1915,6 +1915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7871864708973340229}
+  - component: {fileID: 2173591479104339286}
   m_Layer: 0
   m_Name: StartLevel
   m_TagString: Untagged
@@ -1940,6 +1941,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2173591479104339286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388819547308204419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ff2fce9a5960c499f02a1c08d64ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doortype: 0
+  roomController: {fileID: 0}
+  type: 2
+  NextRoomChallenge: 
+  NextRoomStandard: 
+  NextRoomBasic: Basic1
 --- !u!1 &4423585935619798544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7402,6 +7421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8167015677146412655, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: roomController
+      value: 
+      objectReference: {fileID: 2173591479104339286}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7664,11 +7687,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2577585254963922481, guid: ac719b1d0f58391469cc19fd947ca44c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.36
+      value: -2.39
       objectReference: {fileID: 0}
     - target: {fileID: 2577585254963922481, guid: ac719b1d0f58391469cc19fd947ca44c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3531575
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 2577585254963922481, guid: ac719b1d0f58391469cc19fd947ca44c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8026,6 +8049,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8151575218061380370, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doortype
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167015677146412655, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doortype
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167015677146412655, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: roomController
+      value: 
+      objectReference: {fileID: 2173591479104339286}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9244,6 +9279,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8151575218061380370, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doortype
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167015677146412655, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doortype
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167015677146412655, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: roomController
+      value: 
+      objectReference: {fileID: 2173591479104339286}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
