@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    public static ObjectPool Instance;
     [System.Serializable]
     public struct Pool
     {
@@ -26,8 +27,13 @@ public class ObjectPool : MonoBehaviour
                 GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
+                DontDestroyOnLoad(obj);
             }
             poolDictionary.Add(pool.tag, objectPool);
+            if (objectPool == null)
+            {
+                Instance = this;
+            }
         }
     }
 
