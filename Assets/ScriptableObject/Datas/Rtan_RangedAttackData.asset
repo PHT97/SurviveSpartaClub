@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 650a65aef1acb0c4db65c69b2a505133, type: 3}
-  m_Name: Player_RangedAttackData
+  m_Name: Rtan_RangedAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.15
+  delay: 1
   power: 2
-  speed: 15
+  speed: 7
   target:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   isOnKnockback: 1
   knockbackPower: 5
   knockbackTime: 0.1
-  bulletNameTag: Arrow
+  bulletNameTag: RtanArrow
   duration: 5
-  spread: 4
-  numberofProjectilesPerShot: 1
+  spread: 5
+  numberofProjectilesPerShot: 2
   multipleProjectilesAngel: 7
   projectileColor: {r: 1, g: 1, b: 1, a: 1}
