@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rtan_RangedAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 1
+  delay: 1.8
   power: 2
   speed: 7
   target:
@@ -25,6 +25,6 @@ MonoBehaviour:
   bulletNameTag: RtanArrow
   duration: 5
   spread: 5
-  numberofProjectilesPerShot: 2
+  numberofProjectilesPerShot: 1
   multipleProjectilesAngel: 7
   projectileColor: {r: 1, g: 1, b: 1, a: 1}
