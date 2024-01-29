@@ -32,7 +32,7 @@ public class NextScene : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("StartingLevel");
     }
 
     public void OnClickCharater()
