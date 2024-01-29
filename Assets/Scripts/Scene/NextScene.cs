@@ -7,7 +7,10 @@ using UnityEngine.UI;
 public enum CharacterType
 {
     Character_1,
-    Character_2
+    Character_2,
+    Character_3,
+    Character_4
+
 }
 
 [System.Serializable]
