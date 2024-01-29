@@ -29,31 +29,16 @@ public class DoorManager : MonoBehaviour
                 case DoorType.challenge:
                     Debug.Log("Ã§¸°Áö·ë");
                     roomController.SendMessage("onDoorEnter", 1);
-                    //player.transform.position = new Vector2(transform.position.x - Offset, transform.position.y + Offset);
                     break;
                 case DoorType.standard:
                     Debug.Log("½ºÅÄ´Ùµå·ë");
                     roomController.SendMessage("onDoorEnter", 2);
-                    //player.transform.position = new Vector2(transform.position.x, transform.position.y + Offset);
                     break;
                 case DoorType.basic:
                     Debug.Log("º£ÀÌÁ÷·ë");
                     roomController.SendMessage("onDoorEnter", 3);
-                    //player.transform.position = new Vector2(transform.position.x + Offset, transform.position.y + Offset);
                     break;
             }
         }
     }
-    //void InitializeChallenge()
-    //{
-        
-    //}
-    //void InitializeStandard()
-    //{
-
-    //}
-    //void InitializeBasic()
-    //{
-
-    //}
 }
