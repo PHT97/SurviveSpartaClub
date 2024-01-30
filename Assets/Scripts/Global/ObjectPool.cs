@@ -38,7 +38,6 @@ public class ObjectPool : MonoBehaviour
             GameObject obj = Instantiate(pool.prefab);
             obj.SetActive(false);
             objectPool.Enqueue(obj);
-            //DontDestroyOnLoad(obj);
         }
 
         if (poolDictionary.ContainsKey(pool.tag))
