@@ -81,10 +81,6 @@ public class GameManager : MonoBehaviour
         if (time > 0f)
         {
             time -= Time.deltaTime;
-            if (time == 0f)
-            {
-                time = 0f;
-            }
             DungeonTime.text = time.ToString("N2");
         }
         else

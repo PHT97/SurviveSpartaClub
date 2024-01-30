@@ -25,6 +25,7 @@ public class TopDownBossContreoller : TopDownEnemyController
             if (hit.collider != null && hit.collider.gameObject.name.Equals("Player")) //layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))
             {
                 CallLookEvent(direction);
+                CallMoveEvent(Vector2.zero);
                 IsAttacking = true;
             }
         }
