@@ -12,6 +12,7 @@ public class DoorManager : MonoBehaviour
     public DoorType doortype;
     private GameObject player;
     public RoomController roomController;
+    public static int dungeonNum = 0;
     //private float Offset = 8f;
 
     private void Start()
@@ -29,14 +30,18 @@ public class DoorManager : MonoBehaviour
                 case DoorType.challenge:
                     Debug.Log("Ã§¸°Áö·ë");
                     roomController.SendMessage("onDoorEnter", 1);
+                    dungeonNum += 1;
                     break;
                 case DoorType.standard:
                     Debug.Log("½ºÅÄ´Ùµå·ë");
                     roomController.SendMessage("onDoorEnter", 2);
+                    dungeonNum += 1;
                     break;
                 case DoorType.basic:
                     Debug.Log("º£ÀÌÁ÷·ë");
                     roomController.SendMessage("onDoorEnter", 3);
+                    dungeonNum += 1;
+                    Debug.Log("ÇöÀç Å¬¸®¾î ¹øÈ£" + dungeonNum);
                     break;
             }
         }

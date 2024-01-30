@@ -13,6 +13,7 @@ public class ProjectileManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -30,5 +31,4 @@ public class ProjectileManager : MonoBehaviour
 
         obj.SetActive(true);
     }
-
 }

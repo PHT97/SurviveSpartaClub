@@ -29,6 +29,7 @@ public class HealthSystem : MonoBehaviour
     {
         CurrentHealth = _statsHandler.CurrentStats.maxHealth;
     }
+    
 
     private void Update()
     {
@@ -67,8 +68,9 @@ public class HealthSystem : MonoBehaviour
         {
             Debug.Log("Dead");
             CallDeath();
+            CurrentHealth = _statsHandler.CurrentStats.maxHealth;
         }
-        Debug.Log("Is Hit");
+        Debug.Log("현재체력 = " + CurrentHealth);
         return true;
     }
 

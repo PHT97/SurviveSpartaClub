@@ -56,10 +56,6 @@ public class RangedAttackController : MonoBehaviour
                 if (_attackData.isOnKnockback)
                 {
                     TopDowMovement movement = collision.GetComponent<TopDowMovement>();
-                    //if (movement != null)
-                    //{
-                    //    movement.ApplyKnockback(transform, _attackData.knockbackPower, _attackData.knockbackTime);
-                    //}
                 }
             }
             DestroyProjectile(collision.ClosestPoint(transform.position), fxOnDestory);

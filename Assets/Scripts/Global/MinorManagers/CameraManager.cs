@@ -19,15 +19,11 @@ public class CameraManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
-
         TargetPos = new Vector3(
             player.transform.position.x + offsetX,
             player.transform.position.y + offsetY,
             player.transform.position.z + offsetZ
             );
-
         transform.position = Vector3.Lerp(transform.position, TargetPos, Time.deltaTime * cameraSpeed);
-
     }
 }
