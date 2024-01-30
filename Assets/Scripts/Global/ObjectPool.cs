@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectPool : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
+        SpawnObjectPool();
+    }
+    public void SpawnObjectPool()
+    {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
         foreach (var pool in pools)
         {
@@ -27,13 +32,13 @@ public class ObjectPool : MonoBehaviour
                 GameObject obj = Instantiate(pool.prefab);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
-                DontDestroyOnLoad(obj);
+                //DontDestroyOnLoad(obj);
             }
             poolDictionary.Add(pool.tag, objectPool);
-            if (objectPool == null)
-            {
-                Instance = this;
-            }
+            //if (objectPool == null)
+            //{
+            //    Instance = this;
+            //}
         }
     }
 
@@ -46,5 +51,24 @@ public class ObjectPool : MonoBehaviour
         poolDictionary[tag].Enqueue(obj);
 
         return obj;
+    }
+
+    // 새로운 씬을 추가
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // 새로운 씬에 아래 내용을 새로 호출
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SpawnObjectPool();
+    }
+
+    // 게임 종료 시
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
