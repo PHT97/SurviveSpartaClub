@@ -11,16 +11,14 @@ public class TopDownEnemyController : TopDownCharacterController
     {
         base.Awake();
     }
-
+    protected virtual void FixedUpdate()
+    {
+        
+    }
     protected virtual void Start()
     {
         gameManager = GameManager.instance;
         ClosestTarget = gameManager.Player;
-    }
-
-    protected virtual void FixedUpdate()
-    {
-        
     }
 
     protected float DistanceToTarget()
