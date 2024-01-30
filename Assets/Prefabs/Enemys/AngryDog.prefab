@@ -158,6 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10f4477c822ffe4d89375b54cceb69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingClip: {fileID: 0}
   projectileSpawnPosition: {fileID: 6319344405035784071}
 --- !u!114 &1837923736501559982
 MonoBehaviour:
