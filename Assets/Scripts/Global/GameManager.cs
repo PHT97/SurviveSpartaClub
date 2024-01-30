@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -81,12 +82,12 @@ public class GameManager : MonoBehaviour
         if (time > 0f)
         {
             time -= Time.deltaTime;
-            DungeonTime.text = time.ToString("N2");
         }
         else
         {
             time = 0f;
         }
+        DungeonTime.text = time.ToString("N2");
     }
 
     public void SettingTime()
@@ -107,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        Player.GetComponent<PlayerInput>().enabled = true;
         IsPlaying = false;
         Time.timeScale = 1f;
         playerHealthSystem.ChangeHealth(playerHealthSystem.MaxHealth);   //플레이어의 체력을 초기화
@@ -120,9 +122,11 @@ public class GameManager : MonoBehaviour
     }
     public void ExitGame()
     {
+
         Destroy(gameObject);
         Destroy(PlayerObject);
         Destroy(MainCamera);
+        Player.GetComponent<PlayerInput>().enabled = true;
         DoorManager.dungeonNum = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
