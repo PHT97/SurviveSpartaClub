@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    public static ObjectPool Instance;
     [System.Serializable]
     public struct Pool
     {
@@ -21,20 +20,36 @@ public class ObjectPool : MonoBehaviour
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
         foreach (var pool in pools)
         {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
-            for (int i = 0; i < pool.size; i++)
-            {
-                GameObject obj = Instantiate(pool.prefab);
-                obj.SetActive(false);
-                objectPool.Enqueue(obj);
-                DontDestroyOnLoad(obj);
-            }
-            poolDictionary.Add(pool.tag, objectPool);
-            if (objectPool == null)
-            {
-                Instance = this;
-            }
+            InitPool(pool);
         }
+    }
+
+    void InitPool(string tag)
+    {
+        var pool = pools.Find(p => p.tag == tag);
+        InitPool(pool);
+    }
+
+    void InitPool(Pool pool)
+    {
+        Queue<GameObject> objectPool = new Queue<GameObject>();
+        for (int i = 0; i < pool.size; i++)
+        {
+            GameObject obj = Instantiate(pool.prefab);
+            obj.SetActive(false);
+            objectPool.Enqueue(obj);
+            //DontDestroyOnLoad(obj);
+        }
+
+        if (poolDictionary.ContainsKey(pool.tag))
+        {
+            poolDictionary[pool.tag] = objectPool;
+        }
+        else
+        {
+            poolDictionary.Add(pool.tag, objectPool);
+        }
+
     }
 
     public GameObject SpawnFromPool(string tag)
@@ -43,6 +58,13 @@ public class ObjectPool : MonoBehaviour
             return null;
 
         GameObject obj = poolDictionary[tag].Dequeue();
+
+        if (obj == null)
+        {
+            InitPool(tag);
+            obj = poolDictionary[tag].Dequeue();
+        }
+
         poolDictionary[tag].Enqueue(obj);
 
         return obj;
