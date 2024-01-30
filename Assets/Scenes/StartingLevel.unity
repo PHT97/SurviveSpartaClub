@@ -338,9 +338,6 @@ MonoBehaviour:
   - tag: SoundSource
     prefab: {fileID: 6466296070434276817, guid: a1c78e1bc8cb2934a812b6569510a03d, type: 3}
     size: 5
-  - tag: EmemySoundSource
-    prefab: {fileID: 2472875376974752086, guid: a72a0e0ef60d29949a2649c4ad191ea6, type: 3}
-    size: 5
 --- !u!114 &250637183
 MonoBehaviour:
   m_ObjectHideFlags: 0
