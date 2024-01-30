@@ -23,8 +23,8 @@ MonoBehaviour:
   knockbackPower: 5
   knockbackTime: 0.1
   bulletNameTag: BossArrow
-  duration: 5
-  spread: 0
+  duration: 6
+  spread: 6
   numberofProjectilesPerShot: 20
-  multipleProjectilesAngel: 25
+  multipleProjectilesAngel: 20
   projectileColor: {r: 1, g: 1, b: 1, a: 1}

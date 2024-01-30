@@ -17,10 +17,10 @@ GameObject:
   - component: {fileID: 6550348059991403604}
   - component: {fileID: 4014660886288644076}
   - component: {fileID: 4706443825765882574}
+  - component: {fileID: 2484644891112367569}
   - component: {fileID: 700184145875447930}
   - component: {fileID: 567224514477242662}
   - component: {fileID: 816637362189675640}
-  - component: {fileID: 2484644891112367569}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3701940442354070572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 6.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -205,6 +205,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
   damageClip: {fileID: 8300000, guid: 0f63e4e69f2ef2f46ac9a8989535daa3, type: 3}
+--- !u!114 &2484644891112367569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701940442354070572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6696c7f9132cfed4c89edd5356a7b921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &700184145875447930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,18 +346,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2484644891112367569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701940442354070572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6696c7f9132cfed4c89edd5356a7b921, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3851265364371558523
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +462,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a9f84881abde25b48904c0ff67bca145, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -480,9 +480,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1869315837
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dd9f4e0dff59af0498de25d403b1334e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

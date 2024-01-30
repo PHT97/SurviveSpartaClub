@@ -354,6 +354,7 @@ MonoBehaviour:
   soundEffectPitchVariance: 0.4
   musicVolume: 0.1
   musicClip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  bossBGM: {fileID: 8300000, guid: 91c9d81d1966917478337420af8a9c51, type: 3}
 --- !u!82 &250637184
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11797,7 +11798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 5
+    maxHealth: 10
     speed: 5
     attackSO: {fileID: 11400000, guid: 2030a4a8ca7b64d4fb51efaea65aa77e, type: 2}
   statsModifiers: []
@@ -12623,7 +12624,7 @@ MonoBehaviour:
     size: 30
   - tag: BossArrow
     prefab: {fileID: 4565184887086591762, guid: 465e042a5c129cd429b391d584a38255, type: 3}
-    size: 50
+    size: 60
 --- !u!114 &2756817399854561039
 MonoBehaviour:
   m_ObjectHideFlags: 0
