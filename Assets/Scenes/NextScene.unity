@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 554566211}
   - component: {fileID: 554566213}
   - component: {fileID: 554566212}
+  - component: {fileID: 554566214}
   m_Layer: 5
   m_Name: CharacterSprite
   m_TagString: Untagged
@@ -725,7 +726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25d2b543073db413c92f4c830de3dd66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -743,6 +744,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554566210}
   m_CullTransparentMesh: 1
+--- !u!95 &554566214
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554566210}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98c1efb7fd5ba46fcb9164991c35a34c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &577223863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2371,17 +2393,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharaterList:
   - CharacterType: 0
-    CharacterSprite: {fileID: 21300000, guid: 2f4a5899f3b584c46bed5b522e1dd8e7, type: 3}
-    AnimatorController: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 25d2b543073db413c92f4c830de3dd66, type: 3}
+    AnimatorController: {fileID: 9100000, guid: 98c1efb7fd5ba46fcb9164991c35a34c, type: 2}
   - CharacterType: 1
     CharacterSprite: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
-    AnimatorController: {fileID: 0}
+    AnimatorController: {fileID: 9100000, guid: 6cfdd5808f938479e89d884923c23866, type: 2}
   - CharacterType: 2
     CharacterSprite: {fileID: 21300000, guid: 377e209da51e8ff4eb98b235b49eea49, type: 3}
-    AnimatorController: {fileID: 0}
+    AnimatorController: {fileID: 9100000, guid: baa3f3cc8520d475ebd76f8fe73b8545, type: 2}
   - CharacterType: 3
     CharacterSprite: {fileID: 21300000, guid: 8ffa5cf01b0962d4f81ede187652328b, type: 3}
-    AnimatorController: {fileID: 0}
+    AnimatorController: {fileID: 9100000, guid: d5cfacfc4b713457aba6036796052ca5, type: 2}
   characterSprite: {fileID: 512660304}
   inputField: {fileID: 610656415}
   information: {fileID: 2030499882}
