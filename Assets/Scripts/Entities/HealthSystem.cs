@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -91,8 +92,10 @@ public class HealthSystem : MonoBehaviour
     public void EnemyDead()
     {
         if (isPlayer)
+        {
+            GetComponent<PlayerInput>().enabled = false;
             return;
-
+        }
         GameManager.instance.CallEnemyDeadEvent();
     } 
 }
