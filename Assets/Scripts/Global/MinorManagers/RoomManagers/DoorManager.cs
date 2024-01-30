@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum DoorType
+{
+    challenge = 0, standard, basic
+}
 
 public class DoorManager : MonoBehaviour
 {
-    public enum DoorType
-    {
-        challenge, standard, basic
-    }
+    
 
     public DoorType doortype;
     private GameObject player;

@@ -1,30 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static DoorManager;
 
 public class DoorControll : MonoBehaviour
 {
-
     [SerializeField] private GameObject OpenedDoor;
     [SerializeField] private GameObject ClosedDoor;
 
-
-
-    //private RoomController roomController;
-
-    //public GameManager gameManager;
-    void Start()
+    private void Start()
     {
-        OnRoomClear();
+        GameManager.instance.doorControll.Add(this);
     }
 
-    void OnRoomClear()
+    public void OnRoomClear()
     {
-        //if (gameManager.EnemyCount == 0)
-        //{
-        //    Destroy(ClosedDoor);
-        //    OpenedDoor.SetActive(true);
-        //}
+        try
+        {
+            ClosedDoor.SetActive(false);
+            OpenedDoor.SetActive(true);
+        }
+        catch(MissingReferenceException e) 
+        {
+            return;
+        }
     }
 }

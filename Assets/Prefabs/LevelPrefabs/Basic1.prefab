@@ -5147,6 +5147,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6987444431670243191}
     m_Modifications:
+    - target: {fileID: 4632923065395136491, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doorType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5078022043424922579, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
       propertyPath: m_Name
       value: Norm
@@ -5501,6 +5505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6987444431670243191}
     m_Modifications:
+    - target: {fileID: 4632923065395136491, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doorType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5078022043424922579, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
       propertyPath: m_Name
       value: Easy

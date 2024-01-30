@@ -14191,6 +14191,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 4632923065395136491, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
+      propertyPath: doorType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5045586632459998438, guid: 7b9acf27e721ac4468446b5e25f61b6d, type: 3}
       propertyPath: m_Layer
       value: 21

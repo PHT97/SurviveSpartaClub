@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     //DoorManager에서 클리어개수 받아옴.
     public int clearnum = 0;
+
     public Transform Player { get; private set; }
     [SerializeField] private string playerTag = "Player";
 
     private HealthSystem playerHealthSystem;
+    public List<DoorControll> doorControll;
 
     [SerializeField] private TextMeshProUGUI DungeonTime;       //무적시간 해제 타이머
     [SerializeField] private TextMeshProUGUI ClearDungeonNum;   //클리어던전수
@@ -45,6 +47,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        doorControll = new List<DoorControll>();
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
         playerHealthSystem = Player.GetComponent<HealthSystem>();
         playerHealthSystem.OnDamage += UpdateHealthUI;
@@ -68,6 +71,11 @@ public class GameManager : MonoBehaviour
         enemiesCount--;
         if (enemiesCount <= 0)
         {
+            for(int i = 0; i < doorControll.Count; i++)
+            {
+                doorControll[i].OnRoomClear();
+            }
+            doorControll.Clear();
             Debug.Log("던전 클리어");
         }
     }

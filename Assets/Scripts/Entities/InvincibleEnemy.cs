@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InvincibleEnemy : MonoBehaviour
 {
-    [SerializeField] private float healthActivationTime = 20f;
+    private float healthActivationTime = 10f;
     [SerializeField] private GameObject Shield;
 
     private void Start()
