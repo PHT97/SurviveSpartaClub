@@ -70,7 +70,6 @@ public class HealthSystem : MonoBehaviour
             CallDeath();
             CurrentHealth = _statsHandler.CurrentStats.maxHealth;
         }
-        Debug.Log("현재체력 = " + CurrentHealth);
         return true;
     }
 

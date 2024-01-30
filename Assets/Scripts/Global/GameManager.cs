@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         HPNum.text = playerHealthSystem.MaxHealth.ToString();
-        time = 5f;
+        time = 0f;
     }
     private void Awake()
     {
@@ -41,10 +41,24 @@ public class GameManager : MonoBehaviour
         playerHealthSystem = Player.GetComponent<HealthSystem>();
         playerHealthSystem.OnDamage += UpdateHealthUI;
         playerHealthSystem.OnDeath += GameOver;
-        
+
         gameOverUI.SetActive(false);
     }
     private void Update()
+    {
+        UpdateTimeUI();
+    }
+
+    private void UpdateDungeonClear()
+    {
+        ClearDungeonNum.text = clearnum.ToString();
+        Debug.Log(clearnum);
+    }
+    private void UpdateHealthUI()
+    {
+        HPNum.text = playerHealthSystem.CurrentHealth.ToString();
+    }
+    public void UpdateTimeUI()
     {
         if (time > 0f)
         {
@@ -56,31 +70,27 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
-    
-    private void UpdateDungeonClear()
+    public void SettingTime()
     {
-        ClearDungeonNum.text = clearnum.ToString();
-        Debug.Log(clearnum);
+        time = 10f;
     }
-    private void UpdateHealthUI()
-    {
-        HPNum.text = playerHealthSystem.CurrentHealth.ToString();
-    }
-
     private void GameOver()
     {
         gameOverUI.SetActive(true);
     }
-    
+
     public void UpdateDungeonNum()
     {
-        
+
     }
     public void RestartGame()
     {
         IsPlaying = false;
         playerHealthSystem.ChangeHealth(playerHealthSystem.MaxHealth);   //플레이어의 체력을 초기화
         UpdateHealthUI();
+        SettingTime();
+        UpdateTimeUI();
+        Player.transform.position = Vector3.zero;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); //buildIndex
         gameOverUI.SetActive(false);            //게임오버UI가리기
         IsPlaying = true;                       //게임 재시작

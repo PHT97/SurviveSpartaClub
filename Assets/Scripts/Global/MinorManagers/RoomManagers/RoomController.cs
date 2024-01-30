@@ -25,17 +25,23 @@ public class RoomController : MonoBehaviour
         {
             //startPoint.currentMapName = NextRoomChallenge;
             SceneManager.LoadScene($"{NextRoomChallenge}");
+            GameManager.instance.SettingTime();
+            GameManager.instance.UpdateTimeUI();
         }
         else if (i == 2)
         {
             //startPoint.currentMapName = NextRoomStandard;
             SceneManager.LoadScene($"{NextRoomStandard}");
+            GameManager.instance.SettingTime();
+            GameManager.instance.UpdateTimeUI();
         }
         else if (i == 3)
         {
             Debug.Log("BasicRoom");
             //startPoint.currentMapName = NextRoomBasic;
             SceneManager.LoadScene($"{NextRoomBasic}");
+            GameManager.instance.SettingTime();
+            GameManager.instance.UpdateTimeUI();
         }
     }
 
