@@ -337,10 +337,7 @@ MonoBehaviour:
   pools:
   - tag: SoundSource
     prefab: {fileID: 6466296070434276817, guid: a1c78e1bc8cb2934a812b6569510a03d, type: 3}
-    size: 5
-  - tag: EmemySoundSource
-    prefab: {fileID: 2472875376974752086, guid: a72a0e0ef60d29949a2649c4ad191ea6, type: 3}
-    size: 5
+    size: 7
 --- !u!114 &250637183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11785,6 +11782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  damageClip: {fileID: 8300000, guid: 0f63e4e69f2ef2f46ac9a8989535daa3, type: 3}
 --- !u!114 &1594213044
 MonoBehaviour:
   m_ObjectHideFlags: 0
