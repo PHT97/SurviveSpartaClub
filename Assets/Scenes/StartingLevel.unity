@@ -337,7 +337,7 @@ MonoBehaviour:
   pools:
   - tag: SoundSource
     prefab: {fileID: 6466296070434276817, guid: a1c78e1bc8cb2934a812b6569510a03d, type: 3}
-    size: 5
+    size: 20
 --- !u!114 &250637183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11782,6 +11782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  damageClip: {fileID: 8300000, guid: 0f63e4e69f2ef2f46ac9a8989535daa3, type: 3}
 --- !u!114 &1594213044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11900,7 +11901,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.9}
+  m_Size: {x: 0.4, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &1594213049
 MonoBehaviour:
@@ -12621,8 +12622,8 @@ MonoBehaviour:
     prefab: {fileID: 6324604921710812649, guid: 02fd13d5df91c8b4ea5e440ea90ef916, type: 3}
     size: 30
   - tag: BossArrow
-    prefab: {fileID: 4565184887086591762, guid: 69da374dbb7cdb842998598f5c865f1c, type: 3}
-    size: 40
+    prefab: {fileID: 4565184887086591762, guid: 465e042a5c129cd429b391d584a38255, type: 3}
+    size: 50
 --- !u!114 &2756817399854561039
 MonoBehaviour:
   m_ObjectHideFlags: 0

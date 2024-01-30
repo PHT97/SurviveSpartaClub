@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650a65aef1acb0c4db65c69b2a505133, type: 3}
   m_Name: Boss_RangedAttackData
   m_EditorClassIdentifier: 
-  size: 2
-  delay: 0.7
+  size: 1
+  delay: 1.5
   power: 1
-  speed: 5
+  speed: 4
   target:
     serializedVersion: 2
     m_Bits: 256
@@ -24,7 +24,7 @@ MonoBehaviour:
   knockbackTime: 0.1
   bulletNameTag: BossArrow
   duration: 5
-  spread: 5
-  numberofProjectilesPerShot: 5
-  multipleProjectilesAngel: 7
-  projectileColor: {r: 1, g: 0.2216981, b: 0.2216981, a: 1}
+  spread: 0
+  numberofProjectilesPerShot: 20
+  multipleProjectilesAngel: 25
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}

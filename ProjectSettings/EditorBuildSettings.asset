@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonScenes/Challenge5.unity
     guid: fe5d958ce7d5ca84594fecb39aa7b1ba
+  - enabled: 1
+    path: Assets/Scenes/DungeonScenes/BossLevel.unity
+    guid: 0772fce26f60fbf4c9868054f3769792
   m_configObjects: {}

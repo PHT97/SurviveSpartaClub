@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10f4477c822ffe4d89375b54cceb69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingClip: {fileID: 8300000, guid: 0854c5af1c9b5f14c94f2dd75d2298dc, type: 3}
   projectileSpawnPosition: {fileID: 4829831319402314011}
 --- !u!114 &8096484893758638716
 MonoBehaviour:
@@ -437,6 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  damageClip: {fileID: 8300000, guid: 3e6723b8af12d4f4f9333ed8b7da4415, type: 3}
 --- !u!114 &5260819992742348502
 MonoBehaviour:
   m_ObjectHideFlags: 0
