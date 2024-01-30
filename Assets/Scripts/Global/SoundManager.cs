@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class SoundManager : MonoBehaviour
 
     private AudioSource musicAudioSource;
     public AudioClip musicClip;
+    public AudioClip bossBGM;
 
     private void Awake()
     {
@@ -42,6 +44,27 @@ public class SoundManager : MonoBehaviour
         obj.SetActive(true);
         SoundSource soundSource = obj.GetComponent<SoundSource>();
         soundSource.Play(clip, instance.soundEffectVolume, instance.soundEffectPitchVariance);
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name == "BossLevel")
+        {
+            instance.musicAudioSource.Stop();
+            instance.musicAudioSource.clip = bossBGM;
+            instance.musicAudioSource.Play();
+        }
+    }
+
+    void OnDisable()
+    {
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
 

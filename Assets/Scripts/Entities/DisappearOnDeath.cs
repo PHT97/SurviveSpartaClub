@@ -6,6 +6,7 @@ public class DisappearOnDeath : MonoBehaviour
 {
     private HealthSystem _healthSystem;
     private Rigidbody2D _rigidbody;
+    public AudioClip deathClip;
 
     private void Start()
     {
@@ -29,7 +30,8 @@ public class DisappearOnDeath : MonoBehaviour
         {
             component.enabled = false;
         }
-
+        if (deathClip)
+            SoundManager.PlayClip(deathClip);
         Destroy(gameObject, 0.5f);
     }
 }

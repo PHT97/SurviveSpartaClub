@@ -44,7 +44,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        clearnum = DoorManager.dungeonNum;
         instance = this;
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
         playerHealthSystem = Player.GetComponent<HealthSystem>();
