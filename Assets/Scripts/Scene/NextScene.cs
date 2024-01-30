@@ -26,6 +26,9 @@ public class NextScene : MonoBehaviour
 {
     public List<Charater> CharaterList = new List<Charater>();
 
+    //public Animator PlayerAnimator;
+    //public Text PlayerName;
+
     [SerializeField] private Image characterSprite;
     [SerializeField] private InputField inputField;
     [SerializeField] private GameObject information;
@@ -33,10 +36,6 @@ public class NextScene : MonoBehaviour
 
     private CharacterType characterType;
 
-    public void GameStart()
-    {
-        SceneManager.LoadScene("StartingLevel");
-    }
 
     public void OnClickCharater()
     {
@@ -54,5 +53,30 @@ public class NextScene : MonoBehaviour
 
         selectCharacter.SetActive(false);
         information.SetActive(true);
+    }
+
+    /*public void SetChracter(CharacterType characterType, string name)
+    {
+        var character = CharaterList.Find(item => item.CharacterType == characterType);
+
+        //PlayerAnimator.runtimeAnimatorController = character.AnimatorController;
+        //PlayerName.text = name;
+    }*/
+
+    public void OnClickJoin()
+    {
+        if (2 >= inputField.text.Length || inputField.text.Length >= 10)
+        {
+            return;
+        }
+
+        //SetChracter(characterType, inputField.text);
+        string inputText = inputField.text;
+
+        PlayerPrefs.SetString("T",inputText);
+        
+
+        SceneManager.LoadScene("StartingLevel");
+
     }
 }

@@ -57,3 +57,6 @@ TagManager:
   - name: Projectiles
     uniqueID: 2728773129
     locked: 0
+  - name: UI
+    uniqueID: 2722882243
+    locked: 0
