@@ -73,7 +73,9 @@ public class NextScene : MonoBehaviour
         //SetChracter(characterType, inputField.text);
         string inputText = inputField.text;
 
+
         PlayerPrefs.SetString("T",inputText);
+        PlayerPrefs.SetInt("C",(int)characterType);
         
 
         SceneManager.LoadScene("StartingLevel");
