@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5563672517571239939}
   m_Layer: 6
   m_Name: GitHub
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a827e09ff855c1499b6a176bb15fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathClip: {fileID: 8300000, guid: fb17bf20781c19a4ca9e74903ac14696, type: 3}
 --- !u!114 &2049857307065956688
 MonoBehaviour:
   m_ObjectHideFlags: 0

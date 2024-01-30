@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     }
     private void Awake()
     {
-        clearnum = DoorManager.dungeonNum;
         instance = this;
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
         playerHealthSystem = Player.GetComponent<HealthSystem>();
@@ -63,6 +62,10 @@ public class GameManager : MonoBehaviour
         if (time > 0f)
         {
             time -= Time.deltaTime;
+            if (time == 0f)
+            {
+                time = 0f;
+            }
             DungeonTime.text = time.ToString("N2");
         }
         else

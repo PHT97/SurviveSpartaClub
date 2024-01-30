@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 6904760500802884516}
   m_Layer: 6
   m_Name: AngryDog
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a827e09ff855c1499b6a176bb15fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathClip: {fileID: 8300000, guid: 63c595c8dd65a8542bef3b14f3d3a67e, type: 3}
 --- !u!114 &5464545376763347062
 MonoBehaviour:
   m_ObjectHideFlags: 0

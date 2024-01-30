@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 816637362189675640}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
-  damageClip: {fileID: 8300000, guid: 0f63e4e69f2ef2f46ac9a8989535daa3, type: 3}
+  damageClip: {fileID: 8300000, guid: 279c5773d0f180c4499dbc9e2c5204aa, type: 3}
 --- !u!114 &2484644891112367569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a827e09ff855c1499b6a176bb15fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathClip: {fileID: 8300000, guid: 81f20d52dcbc61a4b906f8f3b4274808, type: 3}
 --- !u!95 &567224514477242662
 Animator:
   serializedVersion: 5

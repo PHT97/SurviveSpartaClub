@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 26715425675732839}
   m_Layer: 6
   m_Name: BadRtan
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -305,7 +305,7 @@ Transform:
   - {fileID: 2093589159582119940}
   - {fileID: 4829831319402314011}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4866513668637672796
 BoxCollider2D:
@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a827e09ff855c1499b6a176bb15fbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathClip: {fileID: 8300000, guid: 0a2b6b0388521a844aae5020f26828f8, type: 3}
 --- !u!114 &6050813189694745089
 MonoBehaviour:
   m_ObjectHideFlags: 0
