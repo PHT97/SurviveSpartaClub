@@ -11782,6 +11782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  isPlayer: 1
 --- !u!114 &1594213044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12709,6 +12710,8 @@ MonoBehaviour:
   Canvas: {fileID: 1001275937}
   MainCamera: {fileID: 1799600078}
   PlayerObject: {fileID: 1594213041}
+  enemiesCount: 0
+  isClear: 0
   IsPlaying: 1
 --- !u!114 &6437338449315771531
 MonoBehaviour:

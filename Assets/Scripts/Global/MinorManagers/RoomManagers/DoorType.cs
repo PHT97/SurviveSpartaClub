@@ -30,18 +30,21 @@ public class DoorManager : MonoBehaviour
                 case DoorType.challenge:
                     Debug.Log("챌린지룸");
                     roomController.SendMessage("onDoorEnter", 1);
+                    GameManager.instance.UpdateDungeonNum(dungeonNum);
                     dungeonNum += 1;
                     break;
                 case DoorType.standard:
                     Debug.Log("스탠다드룸");
                     roomController.SendMessage("onDoorEnter", 2);
+                    GameManager.instance.UpdateDungeonNum(dungeonNum);
                     dungeonNum += 1;
                     break;
                 case DoorType.basic:
                     Debug.Log("베이직룸");
                     roomController.SendMessage("onDoorEnter", 3);
+                    GameManager.instance.UpdateDungeonNum(dungeonNum);
                     dungeonNum += 1;
-                    Debug.Log("현재 클리어 번호" + dungeonNum);
+                    //Debug.Log("현재 클리어 번호" + dungeonNum);
                     break;
             }
         }
