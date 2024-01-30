@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     private HealthSystem playerHealthSystem;
 
-    [SerializeField] private TextMeshProUGUI DungeonTime;              //무적시간 해제 타이머
+    [SerializeField] private TextMeshProUGUI DungeonTime;       //무적시간 해제 타이머
     [SerializeField] private TextMeshProUGUI ClearDungeonNum;   //클리어던전수
     [SerializeField] private TextMeshProUGUI HPNum;             //플레이어체력
     [SerializeField] private float time;
