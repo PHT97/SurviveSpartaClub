@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553363637518428493}
   - component: {fileID: 1974301179045625616}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5450905354535601288}
   - component: {fileID: 8971151853469017153}
   - component: {fileID: 8985339954055116627}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: RtanArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 7560695618277306494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.8, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1553363637518428493}

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 10
+    maxHealth: 5
     speed: 2
     attackSO: {fileID: 11400000, guid: 9f0437625f6462e42b60e3fe9e47d249, type: 2}
   statsModifiers: []
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27378eadff227154d96b9a818582e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthActivationTime: 5
+  healthActivationTime: 10
   Shield: {fileID: 8364845565293554534}
 --- !u!95 &4638891065610053089
 Animator:

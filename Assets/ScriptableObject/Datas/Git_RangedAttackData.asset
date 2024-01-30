@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650a65aef1acb0c4db65c69b2a505133, type: 3}
   m_Name: Git_RangedAttackData
   m_EditorClassIdentifier: 
-  size: 1
-  delay: 1
+  size: 1.4
+  delay: 5
   power: 2
-  speed: 7
+  speed: 4
   target:
     serializedVersion: 2
     m_Bits: 256
@@ -24,7 +24,7 @@ MonoBehaviour:
   knockbackTime: 0.1
   bulletNameTag: GitHubArrow
   duration: 5
-  spread: 5
-  numberofProjectilesPerShot: 2
-  multipleProjectilesAngel: 7
+  spread: 0
+  numberofProjectilesPerShot: 4
+  multipleProjectilesAngel: 20
   projectileColor: {r: 1, g: 1, b: 1, a: 1}

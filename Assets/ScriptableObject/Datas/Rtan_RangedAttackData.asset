@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650a65aef1acb0c4db65c69b2a505133, type: 3}
   m_Name: Rtan_RangedAttackData
   m_EditorClassIdentifier: 
-  size: 1
-  delay: 1.8
+  size: 0.6
+  delay: 1.5
   power: 2
-  speed: 7
+  speed: 5
   target:
     serializedVersion: 2
     m_Bits: 256

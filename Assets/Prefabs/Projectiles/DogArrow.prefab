@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 853715975405399526}
   - component: {fileID: 1501208467298209553}
   - component: {fileID: 5181448084393321008}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: DogArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9171711748423599222}
   - component: {fileID: 7936255812375557937}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: normaCat_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

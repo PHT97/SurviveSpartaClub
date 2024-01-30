@@ -15,7 +15,7 @@ MonoBehaviour:
   size: 1
   delay: 3
   power: 2
-  speed: 2
+  speed: 2.5
   target:
     serializedVersion: 2
     m_Bits: 256
@@ -26,5 +26,5 @@ MonoBehaviour:
   duration: 8
   spread: 0
   numberofProjectilesPerShot: 3
-  multipleProjectilesAngel: 45
+  multipleProjectilesAngel: 40
   projectileColor: {r: 1, g: 1, b: 1, a: 1}

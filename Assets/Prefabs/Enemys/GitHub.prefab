@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 3905411434573106702}
   - component: {fileID: 8347661039143558445}
   - component: {fileID: 2049857307065956688}
+  - component: {fileID: 3661932680679157687}
   m_Layer: 6
   m_Name: GitHub
   m_TagString: Untagged
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 2
+    maxHealth: 10
     speed: 2
     attackSO: {fileID: 11400000, guid: 610ab619299572541b88d5de51f3dbdb, type: 2}
   statsModifiers: []
@@ -323,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc6425693633e3248837cda40f00fbe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootRange: 100
+  shootRange: 50
 --- !u!114 &385158336011827949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,8 +375,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27378eadff227154d96b9a818582e71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthActivationTime: 5
+  healthActivationTime: 10
   Shield: {fileID: 1389267942457946316}
+--- !u!95 &3661932680679157687
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8470107719892991797}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e55293289f534a4f9d42fb92b1709f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9188996885583796016
 GameObject:
   m_ObjectHideFlags: 0
