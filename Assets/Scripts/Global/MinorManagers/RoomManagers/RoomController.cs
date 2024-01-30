@@ -16,6 +16,7 @@ public class RoomController : MonoBehaviour
     [SerializeField] string NextRoomChallenge;
     [SerializeField] string NextRoomStandard;
     [SerializeField] string NextRoomBasic;
+    private ObjectPool objectPool;
 
 
     private void onDoorEnter(int i)

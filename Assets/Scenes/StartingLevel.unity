@@ -2554,6 +2554,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraSpeed: 5
+  offsetX: 0
+  offsetY: 1.2
+  offsetZ: 0
 --- !u!114 &1799600083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,7 +2659,7 @@ MonoBehaviour:
     size: 20
   - tag: DogArrow
     prefab: {fileID: 2957388063806595909, guid: 9dc8b251fd4468643937616ee533caab, type: 3}
-    size: 20
+    size: 30
   - tag: RtanArrow
     prefab: {fileID: 7560695618277306494, guid: bbe77f4cbee02914c9d65a37ba9399d8, type: 3}
     size: 20
@@ -2665,7 +2668,7 @@ MonoBehaviour:
     size: 20
   - tag: GitHubArrow
     prefab: {fileID: 6324604921710812649, guid: 02fd13d5df91c8b4ea5e440ea90ef916, type: 3}
-    size: 20
+    size: 30
   - tag: BossArrow
     prefab: {fileID: 4565184887086591762, guid: 69da374dbb7cdb842998598f5c865f1c, type: 3}
     size: 40

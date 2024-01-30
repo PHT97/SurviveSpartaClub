@@ -25,12 +25,12 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Projectile
   - Layer 1
   - Layer 2
   - Layer 3
   - Door
-  - 
+  - ProjectileCollisionLayer
   - 
   - 
   - 

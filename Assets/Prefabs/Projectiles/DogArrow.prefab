@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 853715975405399526}
   - component: {fileID: 1501208467298209553}
   - component: {fileID: 5181448084393321008}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: DogArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelCollisionLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16777216
   fxOnDestory: 1
 --- !u!1 &4963251563763999968
 GameObject:
@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9171711748423599222}
   - component: {fileID: 7936255812375557937}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: normaCat_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a9f84881abde25b48904c0ff67bca145, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,8 +193,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1566194167
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5b086c4f512c9c24896d5a10c8a95177, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -24,7 +24,7 @@ MonoBehaviour:
   knockbackTime: 0.1
   bulletNameTag: AlgorithmArrow
   duration: 5
-  spread: 5
+  spread: 2
   numberofProjectilesPerShot: 2
-  multipleProjectilesAngel: 7
+  multipleProjectilesAngel: 18
   projectileColor: {r: 1, g: 1, b: 1, a: 1}

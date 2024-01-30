@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Dog_RangedAttackData
   m_EditorClassIdentifier: 
   size: 1
-  delay: 1
+  delay: 3
   power: 2
-  speed: 7
+  speed: 2.5
   target:
     serializedVersion: 2
     m_Bits: 256
@@ -23,8 +23,8 @@ MonoBehaviour:
   knockbackPower: 5
   knockbackTime: 0.1
   bulletNameTag: DogArrow
-  duration: 5
-  spread: 5
-  numberofProjectilesPerShot: 2
-  multipleProjectilesAngel: 7
+  duration: 8
+  spread: 0
+  numberofProjectilesPerShot: 3
+  multipleProjectilesAngel: 40
   projectileColor: {r: 1, g: 1, b: 1, a: 1}

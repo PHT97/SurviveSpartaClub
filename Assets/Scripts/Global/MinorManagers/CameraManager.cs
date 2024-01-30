@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CameraManager : MonoBehaviour
 {
     public float cameraSpeed = 5.0f;
+    public float offsetX = 0.0f;            // 카메라의 x좌표
+    public float offsetY = 1.2f;           // 카메라의 y좌표
+    public float offsetZ = 0.0f;          // 카메라의 z좌표
 
     private GameObject player;
+    Vector3 TargetPos;
 
     private void Awake()
     {
@@ -14,8 +19,15 @@ public class CameraManager : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector3 dir = player.transform.position - this.transform.position;
-        Vector3 moveVector = new Vector3(dir.x * cameraSpeed * Time.deltaTime, dir.y * cameraSpeed * Time.deltaTime, 0.0f);
-        this.transform.Translate(moveVector);
+
+
+        TargetPos = new Vector3(
+            player.transform.position.x + offsetX,
+            player.transform.position.y + offsetY,
+            player.transform.position.z + offsetZ
+            );
+
+        transform.position = Vector3.Lerp(transform.position, TargetPos, Time.deltaTime * cameraSpeed);
+
     }
 }
