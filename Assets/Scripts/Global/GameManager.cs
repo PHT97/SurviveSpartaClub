@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
     public int clearnum = 0;
     public Transform Player { get; private set; }
     [SerializeField] private string playerTag = "Player";
+
     private HealthSystem playerHealthSystem;
 
     [SerializeField] private TextMeshProUGUI DungeonTime;       //무적시간 해제 타이머
     [SerializeField] private TextMeshProUGUI ClearDungeonNum;   //클리어던전수
     [SerializeField] private TextMeshProUGUI HPNum;             //플레이어체력
-    [SerializeField] private float time;
+    [SerializeField] private float time;                        //무적시간이 얼마나 남았는지 보여주는 시간
+
 
     public GameObject gameOverUI;
     public GameObject Canvas;
@@ -26,13 +28,19 @@ public class GameManager : MonoBehaviour
     //
     public GameObject MainCamera;
     public GameObject PlayerObject;
+    public Action OnEnemyDeadEvent;
     //
+    public int enemiesCount;
+    public bool isClear = false;
+
     public bool IsPlaying = true;
     private void Start()
     {
         HPNum.text = playerHealthSystem.MaxHealth.ToString();
         time = 0f;
+        OnEnemyDeadEvent += EnemyDead;
     }
+
     private void Awake()
     {
         instance = this;
@@ -43,20 +51,31 @@ public class GameManager : MonoBehaviour
 
         gameOverUI.SetActive(false);
     }
+
     private void Update()
     {
         UpdateTimeUI();
     }
 
-    private void UpdateDungeonClear()
+    public void CallEnemyDeadEvent()
     {
-        ClearDungeonNum.text = clearnum.ToString();
-        Debug.Log(clearnum);
+        OnEnemyDeadEvent?.Invoke();
     }
+
+    public void EnemyDead()
+    {
+        enemiesCount--;
+        if (enemiesCount <= 0)
+        {
+            Debug.Log("던전 클리어");
+        }
+    }
+
     private void UpdateHealthUI()
     {
         HPNum.text = playerHealthSystem.CurrentHealth.ToString();
     }
+
     public void UpdateTimeUI()
     {
         if (time > 0f)
@@ -70,25 +89,30 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            return;
+            time = 0f;
         }
     }
+
     public void SettingTime()
     {
         time = 10f;
     }
+
     private void GameOver()
     {
+        Time.timeScale = 0f;
         gameOverUI.SetActive(true);
     }
 
-    public void UpdateDungeonNum()
+    public void UpdateDungeonNum(int num)
     {
-
+        ClearDungeonNum.text = num.ToString();
     }
+
     public void RestartGame()
     {
         IsPlaying = false;
+        Time.timeScale = 1f;
         playerHealthSystem.ChangeHealth(playerHealthSystem.MaxHealth);   //플레이어의 체력을 초기화
         UpdateHealthUI();
         SettingTime();
@@ -103,6 +127,9 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject);
         Destroy(PlayerObject);
         Destroy(MainCamera);
+        DoorManager.dungeonNum = 0;
+        Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
     }
+    
 }
