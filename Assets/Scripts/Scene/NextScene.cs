@@ -50,7 +50,7 @@ public class NextScene : MonoBehaviour
         Charater character = CharaterList.Find(item => item.CharacterType == characterType);
 
         characterSprite.sprite = character.CharacterSprite;
-        characterSprite.SetNativeSize();
+        //characterSprite.SetNativeSize();
 
         selectCharacter.SetActive(false);
         information.SetActive(true);
