@@ -34,9 +34,11 @@ public class GameManager : MonoBehaviour
     public Action OnEnemyDeadEvent;
     //
     public int enemiesCount;
-    public bool isClear = false;
-
     public bool IsPlaying = true;
+    //
+    public AudioClip ClearClip;
+    public AudioClip GameOverClip;
+
     private void Start()
     {
         HPNum.text = playerHealthSystem.MaxHealth.ToString();
@@ -76,6 +78,7 @@ public class GameManager : MonoBehaviour
                 doorControll[i].OnRoomClear();
             }
             doorControll.Clear();
+            SoundManager.PlayClip(ClearClip);
             Debug.Log("던전 클리어");
         }
     }
@@ -105,6 +108,7 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        SoundManager.PlayClip(GameOverClip);
         Time.timeScale = 0f;
         gameOverUI.SetActive(true);
     }
