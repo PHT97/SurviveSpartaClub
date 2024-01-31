@@ -767,14 +767,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2083675841298503662, guid: 9fea372557664b84cb08a51d8cff1639, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7219048183548209633}
+      addedObject: {fileID: 7219048183548209642}
   m_SourcePrefab: {fileID: 100100000, guid: 9fea372557664b84cb08a51d8cff1639, type: 3}
 --- !u!4 &7219048183548209632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4069148861334443728, guid: 9fea372557664b84cb08a51d8cff1639, type: 3}
   m_PrefabInstance: {fileID: 7219048183548209631}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7219048183548209633
+--- !u!114 &7219048183548209642
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -783,16 +783,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 205454919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77a93be5236b0479683cc9559efee56b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da3591cf2c034a0991a87557590cd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharaterList: []
-  PlayerAnimator: {fileID: 0}
-  PlayerName: {fileID: 1361105633}
-  characterSprite: {fileID: 0}
-  inputField: {fileID: 0}
-  information: {fileID: 0}
-  selectCharacter: {fileID: 0}
+  Nametext: {fileID: 1361105633}
+  CharaterList:
+  - CharacterType: 0
+    CharacterSprite: {fileID: 21300000, guid: 25d2b543073db413c92f4c830de3dd66, type: 3}
+    AnimatorController: {fileID: 9100000, guid: 98c1efb7fd5ba46fcb9164991c35a34c, type: 2}
+  - CharacterType: 1
+    CharacterSprite: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
+    AnimatorController: {fileID: 9100000, guid: 6cfdd5808f938479e89d884923c23866, type: 2}
+  - CharacterType: 2
+    CharacterSprite: {fileID: 21300000, guid: 377e209da51e8ff4eb98b235b49eea49, type: 3}
+    AnimatorController: {fileID: 9100000, guid: baa3f3cc8520d475ebd76f8fe73b8545, type: 2}
+  - CharacterType: 3
+    CharacterSprite: {fileID: 21300000, guid: 8ffa5cf01b0962d4f81ede187652328b, type: 3}
+    AnimatorController: {fileID: 9100000, guid: d5cfacfc4b713457aba6036796052ca5, type: 2}
+  characterType: 0
 --- !u!1001 &7858367936744021075
 PrefabInstance:
   m_ObjectHideFlags: 0
