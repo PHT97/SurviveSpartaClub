@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonScenes/BossLevel.unity
     guid: 0772fce26f60fbf4c9868054f3769792
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 633c273de50f34e259ccd5af6c32f0f5
   m_configObjects: {}

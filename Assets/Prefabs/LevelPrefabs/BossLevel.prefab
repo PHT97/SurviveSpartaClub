@@ -574,9 +574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  NextRoomChallenge: Ending
-  NextRoomStandard: Ending
-  NextRoomBasic: Ending
+  NextRoomChallenge: EndingScene
+  NextRoomStandard: EndingScene
+  NextRoomBasic: EndingScene
 --- !u!1 &5332813966347204321
 GameObject:
   m_ObjectHideFlags: 0
