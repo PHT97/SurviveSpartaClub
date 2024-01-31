@@ -337,7 +337,7 @@ MonoBehaviour:
   pools:
   - tag: SoundSource
     prefab: {fileID: 6466296070434276817, guid: a1c78e1bc8cb2934a812b6569510a03d, type: 3}
-    size: 5
+    size: 20
 --- !u!114 &250637183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +354,7 @@ MonoBehaviour:
   soundEffectPitchVariance: 0.4
   musicVolume: 0.1
   musicClip: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
+  bossBGM: {fileID: 8300000, guid: 91c9d81d1966917478337420af8a9c51, type: 3}
 --- !u!82 &250637184
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11782,6 +11783,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  damageClip: {fileID: 8300000, guid: 0f63e4e69f2ef2f46ac9a8989535daa3, type: 3}
+  isPlayer: 1
 --- !u!114 &1594213044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11796,7 +11799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 5
+    maxHealth: 10
     speed: 5
     attackSO: {fileID: 11400000, guid: 2030a4a8ca7b64d4fb51efaea65aa77e, type: 2}
   statsModifiers: []
@@ -11971,7 +11974,7 @@ Transform:
   - {fileID: 930058165}
   - {fileID: 1245427198}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1594555248
 GameObject:
@@ -12490,7 +12493,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1799600082
 MonoBehaviour:
@@ -12621,8 +12624,8 @@ MonoBehaviour:
     prefab: {fileID: 6324604921710812649, guid: 02fd13d5df91c8b4ea5e440ea90ef916, type: 3}
     size: 30
   - tag: BossArrow
-    prefab: {fileID: 4565184887086591762, guid: 69da374dbb7cdb842998598f5c865f1c, type: 3}
-    size: 40
+    prefab: {fileID: 4565184887086591762, guid: 465e042a5c129cd429b391d584a38255, type: 3}
+    size: 75
 --- !u!114 &2756817399854561039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12701,6 +12704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clearnum: 0
   playerTag: Player
+  doorControll: []
   DungeonTime: {fileID: 1238036398}
   ClearDungeonNum: {fileID: 1100515788}
   HPNum: {fileID: 1163391996}
@@ -12709,6 +12713,8 @@ MonoBehaviour:
   Canvas: {fileID: 1001275937}
   MainCamera: {fileID: 1799600078}
   PlayerObject: {fileID: 1594213041}
+  enemiesCount: 0
+  isClear: 0
   IsPlaying: 1
 --- !u!114 &6437338449315771531
 MonoBehaviour:
@@ -12748,13 +12754,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1939391077465360836, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: doorType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2760499746921698916, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285046734076069638, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4388819547308204419, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
       propertyPath: m_Name
       value: StartLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 5997979084156641252, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405399943415762566, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224291962502435110, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: doorType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7871864708973340229, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7871864708973340229, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12796,7 +12826,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8082915507602467143, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932291354426325029, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5514959937632237287, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+    - {fileID: 7224291962502435110, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
+    - {fileID: 1939391077465360836, guid: c5b8b425b63ea3744b9a55554e5c15be, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

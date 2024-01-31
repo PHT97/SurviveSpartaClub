@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class HealthSystem : MonoBehaviour
 
     public AudioClip damageClip;
 
+    //bool 초기값은 false
+    public bool isPlayer;
+
+
     public float CurrentHealth { get; private set; }
 
     public float MaxHealth => _statsHandler.CurrentStats.maxHealth;
@@ -29,6 +34,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
+        OnDeath += EnemyDead;
         CurrentHealth = _statsHandler.CurrentStats.maxHealth;
     }
     
@@ -77,9 +83,19 @@ public class HealthSystem : MonoBehaviour
         }
         return true;
     }
-
-    private void CallDeath()
+    
+    public void CallDeath()
     {
         OnDeath?.Invoke();
     }
+
+    public void EnemyDead()
+    {
+        if (isPlayer)
+        {
+            GetComponent<PlayerInput>().enabled = false;
+            return;
+        }
+        GameManager.instance.CallEnemyDeadEvent();
+    } 
 }
