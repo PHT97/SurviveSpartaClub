@@ -12025,10 +12025,10 @@ MonoBehaviour:
     AnimatorController: {fileID: 9100000, guid: 3af331cd845da46439114e1f88fb7292, type: 2}
   - CharacterType: 2
     CharacterSprite: {fileID: 21300000, guid: 377e209da51e8ff4eb98b235b49eea49, type: 3}
-    AnimatorController: {fileID: 9100000, guid: baa3f3cc8520d475ebd76f8fe73b8545, type: 2}
+    AnimatorController: {fileID: 9100000, guid: 764ff9f5894d54315b47174d7a485859, type: 2}
   - CharacterType: 3
     CharacterSprite: {fileID: 21300000, guid: 8ffa5cf01b0962d4f81ede187652328b, type: 3}
-    AnimatorController: {fileID: 9100000, guid: d5cfacfc4b713457aba6036796052ca5, type: 2}
+    AnimatorController: {fileID: 9100000, guid: 0489a637fee5a4d72a187d7d76949b33, type: 2}
   characterType: 0
   animator: {fileID: 1594213054}
 --- !u!95 &1594213054
