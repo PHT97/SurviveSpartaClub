@@ -12018,7 +12018,7 @@ MonoBehaviour:
   CharaterList:
   - CharacterType: 0
     CharacterSprite: {fileID: 21300000, guid: 25d2b543073db413c92f4c830de3dd66, type: 3}
-    AnimatorController: {fileID: 9100000, guid: 98c1efb7fd5ba46fcb9164991c35a34c, type: 2}
+    AnimatorController: {fileID: 9100000, guid: 49e5346913b2ed2429dcc8b483a86282, type: 2}
   - CharacterType: 1
     CharacterSprite: {fileID: 21300000, guid: 975f3fc77e22ed846911b3ca5acedac4, type: 3}
     AnimatorController: {fileID: 9100000, guid: 6cfdd5808f938479e89d884923c23866, type: 2}
